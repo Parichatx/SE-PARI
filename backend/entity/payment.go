@@ -6,6 +6,7 @@ import ("gorm.io/gorm"
 
 
 type Payment struct {
+	gorm.Model
 	PaymentID   int       `gorm:"primaryKey"`
 	InvoiceID   int       `gorm:"not null"` // Foreign Key to Invoice
 	PaymentDate time.Time // Date the payment was made

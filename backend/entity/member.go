@@ -1,8 +1,10 @@
 package entity
 
-import("gorm.io/gorm") 
+import("gorm.io/gorm"
+	"time" ) 
 
 	type Member struct {
+		gorm.Model
 		MemberID    uint      `gorm:"primaryKey;autoIncrement" json:"member_id"`
 		FirstName   string    `gorm:"type:varchar(100);not null" json:"first_name"`
 		LastName    string    `gorm:"type:varchar(100);not null" json:"last_name"`
@@ -16,7 +18,7 @@ import("gorm.io/gorm")
 		EmployeeID  uint      `gorm:"not null" json:"employee_id"`
 	
 		// Relations
-		Gender   Gender   `gorm:"foreignKey:GenderID" json:"gender"`
+		//Gender   Gender   `gorm:"foreignKey:GenderID" json:"gender"`
 		Room     Room     `gorm:"foreignKey:RoomID" json:"room"`
 		Employee Employee `gorm:"foreignKey:EmployeeID" json:"employee"`
 	}

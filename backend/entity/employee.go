@@ -6,6 +6,7 @@ import ("gorm.io/gorm"
 
 // Employee struct example
 type Employee struct {
+	gorm.Model
 	EmployeeID   uint      `gorm:"primaryKey;autoIncrement" json:"employee_id"`
 	FirstName    string    `gorm:"type:varchar(100);not null" json:"first_name"`
 	LastName     string    `gorm:"type:varchar(100);not null" json:"last_name"`

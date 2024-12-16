@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/Parichatx/SE-PARI/backend/entity" 
+	"github.com/Parichatx/SE-PARI/backend/entity"
 	"github.com/joho/godotenv"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
@@ -52,11 +52,10 @@ func ConnectionDB() {
 
 	fmt.Println("connected database")
 	db = database
-	
-	
+
 }
 
-func getSecretKey() string{
+func getSecretKey() string {
 	// โหลดไฟล์ .env
 	err := godotenv.Load()
 	if err != nil {
@@ -65,7 +64,6 @@ func getSecretKey() string{
 	// คืนค่าคีย์ที่เข้ารหัส
 	return os.Getenv("MY_SECRET_KEY")
 }
-
 
 func SetupDatabase() error {
 
@@ -130,7 +128,7 @@ func SetupDatabase() error {
 		BillStatusID: 1,
 	}
 	db.FirstOrCreate(&Billing1, &entity.Billing{MemberID: 1})
-	
+
 	fmt.Println("Database setup complete with initial data.")
 	return nil
 }

@@ -4,6 +4,7 @@ import "gorm.io/gorm"
 
 
 type Usage struct {
+	gorm.Model
 	UsageID    uint      `gorm:"primaryKey;autoIncrement" json:"usage_id"`
 	UnitUsed   int       `gorm:"not null" json:"unit_used"`
 	TotalCost  uint      `gorm:"not null" json:"total_cost"`

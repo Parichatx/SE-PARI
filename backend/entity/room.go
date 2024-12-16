@@ -8,6 +8,7 @@ import (
 )
 
 type Room struct {
+	gorm.Model
 	RoomID       uint      `gorm:"primaryKey;autoIncrement" json:"room_id"`
 	RoomName     string    `gorm:"type:varchar(100);not null" json:"room_name"`
 	RoomSize     string    `gorm:"type:varchar(50);not null" json:"room_size"`

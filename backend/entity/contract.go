@@ -6,6 +6,7 @@ import ("gorm.io/gorm"
 
 
 type Contract struct {
+	gorm.Model
 	ContractID     uint      `gorm:"primaryKey;autoIncrement" json:"contract_id"`
 	StartDate      time.Time `gorm:"type:date;not null" json:"start_date"`
 	EndDate        time.Time `gorm:"type:date;not null" json:"end_date"`
