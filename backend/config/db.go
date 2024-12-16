@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	//"github.com/Parichatx/user-system2/entity"
+	"github.com/Parichatx/SE-PARI/backend/entity" 
 	"github.com/joho/godotenv"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
