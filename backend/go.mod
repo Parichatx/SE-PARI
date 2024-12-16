@@ -1,4 +1,4 @@
-module github.com/Parichatx/user-system2
+module github.com/Parichatx/SE-PARI
 
 go 1.22.5
 
